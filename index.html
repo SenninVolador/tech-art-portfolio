@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Artist Portfolio</title>
+    <meta name="description"
+        content="Portfolio of a Senior Technical Artist specializing in Unreal Engine, Shaders, and Tools.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation (Ghost/Minimal) -->
+    <nav class="navbar">
+        <div class="logo">DANIEL <span id="xyz-logo" class="xyz-wrapper"><span class="letter-x">X</span><span
+                    class="letter-y">Y</span><span class="letter-z">Z</span></span></div>
+        <ul class="nav-links">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact" class="cta-btn">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section: The "3 Second Rule" Hook -->
+    <header class="hero">
+        <canvas id="tech-canvas"></canvas>
+        <div class="video-background" style="opacity: 0.2;">
+            <!-- Video can still play behind the canvas if desired, keeping structure -->
+        </div>
+        <div class="hero-content">
+            <h1 class="glitch" data-text="DANIEL ROJAS">DANIEL ROJAS</h1>
+            <p class="subtitle">Tech Artist</p>
+            <p class="mini-subtitle">Shaders | VFX | Lighting</p>
+            <a href="#work" class="scroll-down">
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Work Grid (Bento Box Style) -->
+        <section id="work" class="work-section">
+            <div class="section-header">
+                <h2>Selected Works</h2>
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="shaders">Shaders</button>
+                    <button class="filter-btn" data-filter="tools">Tools</button>
+                    <button class="filter-btn" data-filter="optimization">Optimization</button>
+                </div>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Project 1: RainDrop PostProcess -->
+                <article class="project-card large" data-category="shaders">
+                    <div class="media-container">
+                        <div class="media-placeholder"
+                            style="background-image: url('assets/project01/daniel-rojas-pp-drips.jpg');"></div>
+                        <div class="overlay">
+                            <h3>RainDrop PostProcess</h3>
+                            <p>Screen-space rain effect using flow masks.</p>
+                            <span class="tech-tag">UE5</span>
+                            <span class="tech-tag">PostProcess</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Pixelization -->
+                <article class="project-card medium" data-category="shaders">
+                    <div class="media-container">
+                        <div class="media-placeholder"
+                            style="background-image: url('assets/Project02/daniel-rojas-pp-pixelation.jpg');"></div>
+                        <div class="overlay">
+                            <h3>Pixelization Effect</h3>
+                            <p>Retro-style post process.</p>
+                            <span class="tech-tag">UE5</span>
+                            <span class="tech-tag">HLSL</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Project 03 -->
+                <article class="project-card small" data-category="optimization">
+                    <div class="media-container">
+                        <div class="media-placeholder"
+                            style="background-image: url('assets/Project03/daniel-rojas-logos.jpg');"></div>
+                        <div class="overlay">
+                            <h3>Project 03</h3>
+                            <p>Tech Art Showcase.</p>
+                            <span class="tech-tag">UE5</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: Medium (Lookdev) -->
+                <article class="project-card medium" data-category="shaders">
+                    <div class="media-container">
+                        <div class="media-placeholder gradient-4"></div>
+                        <div class="overlay">
+                            <h3>NPR Toon Shader</h3>
+                            <p>Guilty Gear striving aesthetic implementation.</p>
+                            <span class="tech-tag">Material Graph</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Project 5: Small (Script) -->
+                <article class="project-card small" data-category="tools">
+                    <div class="media-container">
+                        <div class="media-placeholder gradient-5"></div>
+                        <div class="overlay">
+                            <h3>Asset Validator</h3>
+                            <p>Pre-commit hooks for Git.</p>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- About / Contact Section (Combined for brevity) -->
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <div class="profile-text">
+                    <h2>Bridging Art & Code</h2>
+                    <p>I build the bridges that allow artists to cross the chasm of technical limitations. With 5+ years
+                        in Unreal Engine, I specialize in creating performant shaders and intuitive tools that empower
+                        creative teams.</p>
+                    <ul class="skills-list">
+                        <li><i class="fa-brands fa-python"></i> Python / C++</li>
+                        <li><i class="fa-solid fa-cube"></i> HLSL / GLSL</li>
+                        <li><i class="fa-solid fa-wand-magic-sparkles"></i> Houdini Engine</li>
+                    </ul>
+                </div>
+                <div id="contact" class="contact-wrapper">
+                    <div class="contact-info">
+                        <h3>Connect</h3>
+                        <p class="contact-desc">Available for freelance or full-time opportunities.</p>
+                        <div class="social-links-minimal">
+                            <a href="#" class="social-icon" aria-label="ArtStation"><i
+                                    class="fa-brands fa-artstation"></i></a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                            <a href="#" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <form id="contact-form" class="contact-form">
+                        <div class="input-group">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="message" required placeholder=" " rows="1"></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Daniel. Built for Performance.</p>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-visuals">
+                    <!-- Toggle Switch (Will be populated dynamically by JS) -->
+                    <div class="view-toggle">
+                        <!-- Buttons injected by script.js -->
+                    </div>
+                    <div class="visual-display" id="modal-visual-container">
+                        <!-- Dynamic Content Here -->
+                        <div class="placeholder-visual">Final Render View</div>
+                    </div>
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title">Project Title</h2>
+                    <div class="tech-stack" id="modal-tags">
+                        <span>UE5</span><span>Python</span>
+                    </div>
+                    <p id="modal-description">Detailed description of the problem solved and the technical approach
+                        taken.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
