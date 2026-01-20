@@ -1,0 +1,14 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "*.rar",
+      "*.zip",
+      "*.md",
+      "PROBAR_DASHBOARD_LOCAL.md"
+    ]
+  }
+}

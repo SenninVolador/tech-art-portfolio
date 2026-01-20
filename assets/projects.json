@@ -1,0 +1,70 @@
+{
+  "projects": [
+    {
+      "title": "Tormented Souls 2 tech art",
+      "category": "optimization",
+      "tags": [
+        "UE5",
+        "Tech Art"
+      ],
+      "description": "Tech Art Showcase. Exploring advanced shader techniques.",
+      "gallery": [
+        {
+          "type": "video",
+          "src": "assets/uploads/tech-art-tormented.mov",
+          "label": "Video"
+        }
+      ],
+      "thumbnail": "assets/uploads/images.jpg",
+      "size": "large"
+    },
+    {
+      "title": "RainDrop PostProcess",
+      "category": "shaders",
+      "tags": [
+        "UE5",
+        "HLSL",
+        "Material Graph"
+      ],
+      "description": "Raindrop postprocess shader. A simple efficient approach to screen-space rain effects using masks and simple black and white textures to simulate fluid flow.",
+      "gallery": [
+        {
+          "type": "video",
+          "src": "assets/project01/untitled.mp4",
+          "label": "Final Result"
+        },
+        {
+          "type": "image",
+          "src": "assets/project01/daniel-rojas-drips.jpg",
+          "label": "Flow Map Mask"
+        }
+      ],
+      "thumbnail": "assets/project01/daniel-rojas-pp-drips.jpg",
+      "size": "small"
+    },
+    {
+      "title": "Pixelization Effect",
+      "category": "shaders",
+      "tags": [
+        "UE5",
+        "PostProcess",
+        "HLSL"
+      ],
+      "description": "Optimization, VFX's, Shaders and re-lighting in Tormented Souls 2 game.",
+      "gallery": [
+        {
+          "type": "image",
+          "src": "assets/Project02/daniel-rojas-pp-pixelation.jpg",
+          "label": "Final Render"
+        },
+        {
+          "type": "image",
+          "src": "assets/Project02/daniel-rojas-untitled-1-1-1.jpg",
+          "label": "Shader Graph"
+        }
+      ],
+      "thumbnail": "assets/Project02/daniel-rojas-pp-pixelation.jpg",
+      "size": "medium"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "heroSpecialties": "Shaders | VFX | Lighting",
+  "footerText": "© 2026 Daniel Rojas",
+  "aboutTitle": "About Me",
+  "socialLinks": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/orbistertius/",
+      "icon": "fa-linkedin"
+    },
+    {
+      "platform": "ArtStation",
+      "url": "https://artstation.com/danielrojas",
+      "icon": "fa-artstation"
+    },
+    {
+      "platform": "Flipped Normals",
+      "icon": " fa-cube",
+      "url": "https://flippednormals.com/creator/hikari?tag=trending"
+    }
+  ],
+  "aboutDescription": "I am a VFX and Technical Artist with over 8 years of experience, specializing in Unreal Engine and Maya. My expertise evolved from offline rendering to real-time VFX for AAA titles like Fortnite. I have contributed to everything from animated films like 'Brave Cat' to technical art for games like 'Tormented Souls 2', always focusing on bridging the gap between artistic vision and technical performance.",
+  "aboutSkills": [
+    "Unreal Engine 5",
+    "Maya",
+    "Shaders",
+    "VFX",
+    "Lighting",
+    "Git/Perforce"
+  ],
+  "resumeTitle": "Resume",
+  "resumeSubtitle": "Professional Experience",
+  "resumeDownloadUrl": "assets/RESUME_DR_2025.pdf",
+  "resumeHistory": [
+    {
+      "company": "PunkRobot",
+      "role": "Lighting",
+      "period": "Aug 2024 – Feb 2025",
+      "description": "Lighting and VFX for the movie 'Brave Cat' using Redshift and Maya."
+    },
+    {
+      "company": "Dual Effect",
+      "role": "Technical / Lighting Art",
+      "period": "Aug 2024 – Feb 2025",
+      "description": "VFX and shaders for 'Tormented Souls 2'. Optimization of lighting and models."
+    },
+    {
+      "company": "Nimble Giant",
+      "role": "TechArt and VFX",
+      "period": "Jun 2022 – Aug 2024",
+      "description": "VFX and shaders for Fortnite and upcoming AAA multiplayer shooter."
+    },
+    {
+      "company": "Birds Were Singing",
+      "role": "Director and Tech Art",
+      "period": "Jan 2019 – Present",
+      "description": "General direction and tech art focusing on lighting, VFX, and shaders."
+    }
+  ],
+  "siteTitle": "Technical Artist Portfolio",
+  "heroSubtitle": "Tech Artist",
+  "siteName": "DANIEL ROJAS",
+  "siteDescription": "Portfolio of a Senior Technical Artist specializing in Unreal Engine, Shaders, and Tools.",
+  "contactTitle": "Let's Connect",
+  "navLogoName": "DANIEL",
+  "contactEmail": "hello@danielrojas.dev",
+  "contactDescription": "Have a project in mind or want to discuss tech art? Drop me a line!",
+  "heroTitle": "DANIEL ROJAS",
+  "navLogoLetters": "XYZ"
+}

@@ -1,0 +1,204 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "assets/uploads"
+public_folder: "assets/uploads"
+
+# ============================================
+# COLLECTIONS - All Editable Content
+# ============================================
+collections:
+
+  # ----------------------------------------
+  # SITE SETTINGS (Hero, About, Contact, etc)
+  # ----------------------------------------
+  - name: "settings"
+    label: "⚙️ Site Settings"
+    files:
+      - name: "general"
+        label: "General Settings"
+        file: "assets/settings.json"
+        description: "Edit all site text, hero section, about, contact info, and social links"
+        fields:
+          # SEO & Basics
+          - label: "Site Name"
+            name: "siteName"
+            widget: "string"
+            hint: "Your name as it appears in the logo"
+
+          - label: "Page Title (SEO)"
+            name: "siteTitle"
+            widget: "string"
+            hint: "Shown in browser tab"
+
+          - label: "Meta Description (SEO)"
+            name: "siteDescription"
+            widget: "text"
+            hint: "Description for search engines"
+
+          # Hero Section
+          - label: "Hero Title"
+            name: "heroTitle"
+            widget: "string"
+            hint: "Big name on the landing page"
+
+          - label: "Hero Subtitle"
+            name: "heroSubtitle"
+            widget: "string"
+            hint: "e.g. 'Tech Artist'"
+
+          - label: "Hero Specialties"
+            name: "heroSpecialties"
+            widget: "string"
+            hint: "e.g. 'Shaders | VFX | Lighting'"
+
+          # Navigation
+          - label: "Nav Logo Name"
+            name: "navLogoName"
+            widget: "string"
+            default: "DANIEL"
+
+          - label: "Nav Logo Letters (RGB)"
+            name: "navLogoLetters"
+            widget: "string"
+            default: "XYZ"
+            hint: "The letters that animate in RGB"
+
+          # About Section
+          - label: "About Title"
+            name: "aboutTitle"
+            widget: "string"
+            default: "About Me"
+
+          - label: "About Description"
+            name: "aboutDescription"
+            widget: "markdown"
+            hint: "Your bio. Supports markdown formatting."
+
+          - label: "Skills List"
+            name: "aboutSkills"
+            widget: "list"
+            hint: "Add your skills one by one"
+
+          # Contact Section
+          - label: "Contact Title"
+            name: "contactTitle"
+            widget: "string"
+
+          - label: "Contact Description"
+            name: "contactDescription"
+            widget: "text"
+
+          - label: "Contact Email"
+            name: "contactEmail"
+            widget: "string"
+
+          # Social Links
+          - label: "Social Links"
+            name: "socialLinks"
+            widget: "list"
+            fields:
+              - { label: "Platform", name: "platform", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "Icon Class", name: "icon", widget: "string", hint: "FontAwesome class, e.g. fa-linkedin" }
+
+          # Footer
+          - label: "Footer Text"
+            name: "footerText"
+            widget: "string"
+
+          # Resume Section
+          - label: "Resume Section"
+            name: "resume"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "resumeTitle", widget: "string", default: "Resume" }
+              - { label: "Subtitle", name: "resumeSubtitle", widget: "string", default: "Professional Experience" }
+              - { label: "Download Link", name: "resumeDownloadUrl", widget: "file", default: "assets/RESUME_DR_2025.pdf" }
+              - label: "Experience History"
+                name: "resumeHistory"
+                widget: "list"
+                fields:
+                  - { label: "Company", name: "company", widget: "string" }
+                  - { label: "Role", name: "role", widget: "string" }
+                  - { label: "Period", name: "period", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+
+  # ----------------------------------------
+  # PROJECTS
+  # ----------------------------------------
+  - name: "projects"
+    label: "📁 Projects"
+    files:
+      - name: "projectsList"
+        label: "All Projects"
+        file: "assets/projects.json"
+        description: "Add, edit, or remove portfolio projects"
+        fields:
+          - name: "projects"
+            label: "Projects"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "Shaders", value: "shaders" }
+                  - { label: "Tools", value: "tools" }
+                  - { label: "Optimization", value: "optimization" }
+                  - { label: "VFX", value: "vfx" }
+
+              - label: "Card Size"
+                name: "size"
+                widget: "select"
+                options:
+                  - { label: "Large (Featured)", value: "large" }
+                  - { label: "Medium", value: "medium" }
+                  - { label: "Small", value: "small" }
+
+              - label: "Description"
+                name: "description"
+                widget: "markdown"
+
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                default: ["UE5"]
+
+              - label: "Thumbnail Image"
+                name: "thumbnail"
+                widget: "image"
+                required: false
+                hint: "Cover image for the project card"
+
+              - label: "Gallery Items"
+                name: "gallery"
+                widget: "list"
+                summary: "{{fields.label}}"
+                fields:
+                  - label: "Type"
+                    name: "type"
+                    widget: "select"
+                    options:
+                      - { label: "Image", value: "image" }
+                      - { label: "Video", value: "video" }
+                      - { label: "CSS Gradient (Placeholder)", value: "css" }
+
+                  - label: "Label"
+                    name: "label"
+                    widget: "string"
+                    default: "View"
+                    hint: "Button text, e.g. 'Final Result', 'Wireframe'"
+
+                  - label: "Source"
+                    name: "src"
+                    widget: "file"
+                    hint: "Upload image/video or paste path. For CSS type, paste gradient code."
