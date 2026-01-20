@@ -1,8 +1,11 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: SenninVolador/tech-art-portfolio
   branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
 
-local_backend: true
+# local_backend: true
 
 media_folder: "assets/uploads"
 public_folder: "assets/uploads"
