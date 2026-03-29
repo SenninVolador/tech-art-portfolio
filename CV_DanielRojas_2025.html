@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Rojas | VFX & Technical Artist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #000000;
+            --secondary: #333333;
+            --muted: #777777;
+            --border: #eeeeee;
+            --bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--primary);
+            line-height: 1.4;
+            background-color: #f0f0f0;
+        }
+
+        .cv-page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto;
+            background: var(--bg);
+            padding: 40px 50px;
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 50px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        @media print {
+            body {
+                background: none;
+            }
+
+            .cv-page {
+                margin: 0 !important;
+                width: 210mm !important;
+                height: 297mm !important;
+                padding: 15mm 20mm !important;
+                gap: 40px !important;
+                grid-template-columns: 160px 1fr !important;
+                box-shadow: none !important;
+                overflow: hidden;
+            }
+
+            .sidebar {
+                gap: 20px !important;
+            }
+
+            .main-content {
+                gap: 25px !important;
+            }
+
+            .summary {
+                font-size: 11.5px !important;
+                line-height: 1.5 !important;
+                margin-bottom: 5px !important;
+            }
+
+            .section-title {
+                margin-bottom: 12px !important;
+                letter-spacing: 2.5px !important;
+                font-size: 11.5px !important;
+            }
+
+            .experience-item {
+                margin-bottom: 18px !important;
+            }
+
+            .exp-company {
+                font-size: 14px !important;
+            }
+
+            .exp-role {
+                font-size: 11.5px !important;
+                margin-bottom: 4px !important;
+            }
+
+            .exp-desc li {
+                font-size: 10.5px !important;
+                margin-bottom: 3.5px !important;
+                line-height: 1.4 !important;
+            }
+
+            .profile-header h1 {
+                font-size: 24px !important;
+                margin-bottom: 8px !important;
+            }
+
+            .profile-header p {
+                font-size: 11.5px !important;
+            }
+
+            .sidebar-section h2 {
+                margin-bottom: 12px !important;
+                font-size: 11px !important;
+            }
+
+            .item-list li {
+                font-size: 11px !important;
+                margin-bottom: 3px !important;
+                line-height: 1.3 !important;
+            }
+
+            .contact-info {
+                gap: 15px !important;
+            }
+
+            .contact-item span:first-child {
+                font-size: 9px !important;
+                margin-bottom: 2px !important;
+            }
+
+            .contact-item a,
+            .contact-item span:last-child {
+                font-size: 10.5px !important;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .profile-header h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .profile-header p {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .sidebar-section h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--primary);
+            padding-bottom: 3px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            font-size: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-item span:first-child {
+            font-weight: 700;
+            font-size: 8px;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .contact-item a,
+        .contact-item span:last-child {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .item-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 11px;
+            color: var(--secondary);
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .summary {
+            font-size: 13px;
+            color: var(--secondary);
+            font-style: italic;
+            border-left: 2px solid var(--border);
+            padding-left: 15px;
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .experience-item {
+            margin-bottom: 20px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .exp-company {
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .exp-date {
+            font-size: 10px;
+            color: var(--muted);
+        }
+
+        .exp-role {
+            font-weight: 500;
+            font-size: 12px;
+            color: var(--secondary);
+            margin-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+            display: inline-block;
+        }
+
+        .exp-desc {
+            list-style: none;
+            font-size: 12px;
+            color: var(--secondary);
+        }
+
+        .exp-desc li {
+            position: relative;
+            padding-left: 12px;
+            margin-bottom: 3px;
+        }
+
+        .exp-desc li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--muted);
+        }
+
+        .education-item {
+            margin-bottom: 10px;
+        }
+
+        .edu-degree {
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .edu-school {
+            font-size: 11px;
+            color: var(--secondary);
+        }
+
+        .no-print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #000;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 4px;
+            border: none;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="no-print-btn no-print" onclick="window.print()">Generate PDF</button>
+    <div class="cv-page">
+        <aside class="sidebar">
+            <div class="profile-header">
+                <h1>DANIEL<br>ROJAS</h1>
+                <p>VFX & Technical Artist</p>
+            </div>
+            <div class="sidebar-section">
+                <h2>Contact</h2>
+                <div class="contact-info">
+                    <div class="contact-item"><span>Email</span><a
+                            href="mailto:danielrojas.1429@gmail.com">danielrojas.1429@gmail.com</a></div>
+                    <div class="contact-item"><span>Phone</span><span>(+56) 951072096</span></div>
+                    <div class="contact-item"><span>Web</span><a href="https://danielrojas.xyz">danielrojas.xyz</a>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <h2>VFX Expertise</h2>
+                <ul class="item-list">
+                    <li>Niagara (UE5) VFX</li>
+                    <li>Stylized VFX & Shaders</li>
+                    <li>Material Graph / HLSL</li>
+                    <li>VFX Texture Gen (Substance)</li>
+                    <li>Embergen / Fluid Sim</li>
+                    <li>Performance Optimization</li>
+                    <li>Unreal Engine 5 Core</li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h2>Software</h2>
+                <ul class="item-list">
+                    <li>Unreal Engine 5</li>
+                    <li>Maya (Python API)</li>
+                    <li>Houdini</li>
+                    <li>Substance Suite</li>
+                    <li>Embergen</li>
+                    <li>Perforce / Git</li>
+                    <li>Adobe Suite</li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="summary">
+                VFX & Technical Artist with over 8 years of experience in Maya and 4 years building high-end stylized solutions. From visual effects and lighting for animated features at Oscar-winning studio PunkRobot ('Brave Cat') to architecting advanced shader systems for AAA-scaled projects. My core expertise lies in Unreal Engine 5 (Niagara, Material Graph) and shader-driven visual solutions, focusing on capturing artistic style through technical innovation. I specialize in bridging the gap between artistic vision and engine constraints, ensuring that every effect is not only visually stunning but also performant across all platforms.
+            </section>
+
+            <section>
+                <div class="section-title">Professional Experience</div>
+                <div class="experience-item">
+                    <div class="exp-header"><span class="exp-company">PunkRobot Studio</span><span class="exp-date">Sep 2025
+                            – Feb 2026</span></div>
+                    <div class="exp-role">Lighting Artist</div>
+                    <ul class="exp-desc">
+                        <li>Lighting and rendering for the feature film "Brave Cat".</li>
+                        <li>Solved rendering/lighting challenges to maintain artistic consistency across scenes.</li>
+                        <li>Optimized scenes to ensure high-fidelity results under tight deadlines.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-header"><span class="exp-company">Dual Effect</span><span class="exp-date">2024 –
+                            2025</span></div>
+                    <div class="exp-role">Technical Artist (VFX, Shaders & Optimization)</div>
+                    <ul class="exp-desc">
+                        <li>Architected shader systems and custom post-process VFX for <strong>"Tormented Souls 2"</strong> in UE5.
+                        </li>
+                        <li>Specialized in stylized horror aesthetics through advanced Material Graph logic.
+                        </li>
+                        <li>Delivered performance-optimized visual solutions for multi-platform console targets.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-header"><span class="exp-company">Nimble Giant</span><span class="exp-date">2022 –
+                            2024</span></div>
+                    <div class="exp-role">VFX & Technical Artist</div>
+                    <ul class="exp-desc">
+                        <li>VFX and shader development for high-reach Fortnite Creative ecosystems.</li>
+                        <li>Engineered high-performance Niagara systems for multiplayer AAA titles.</li>
+                        <li>Collaborated on material infrastructure and real-time performance profiling.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-header"><span class="exp-company">Duoc UC</span><span class="exp-date">2020 –
+                            2022</span></div>
+                    <div class="exp-role">3D, Lighting and Rendering Instructor</div>
+                    <p class="summary" style="padding-left: 0; border: none; font-size: 11px; margin-top: 5px; font-style: normal;">
+                        As an instructor at Duoc UC, I led courses in 3D production, lighting, and off line rendering. My role involved curriculum design for a solid understanding of quality rendering, lighting and workflow used in major studies.
+                    </p>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-header"><span class="exp-company">Behaviour Interactive</span><span
+                            class="exp-date">2015</span></div>
+                    <div class="exp-role">QA Production Support</div>
+                    <ul class="exp-desc">
+                        <li>Production logic support for <strong>Fallout Shelter</strong>.</li>
+                        <li>Gained deep insights into mobile pipeline optimization and high-scale production.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-title">Education & Certs</div>
+                <div class="education-item">
+                    <div class="exp-header"><span class="edu-degree">Degree in Digital Animation</span><span
+                            class="exp-date">2015</span></div>
+                    <p class="edu-school">DUOC UC | Santiago, Chile</p>
+                </div>
+                <ul class="exp-desc">
+                    <li>Houdini | Vertex School</li>
+                    <li>Lighting for games | Vertex School</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Technical Art Reel | Daniel Rojas</title>
+    
+    <!-- External Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        :root {
+            --private-accent: #00f2ea;
+            --private-danger: #ff3366;
+        }
+
+        body {
+            background-color: #050505;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .private-container {
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .disclaimer-card {
+            background: rgba(15, 15, 15, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            margin-bottom: 2rem;
+            border-top: 1px solid rgba(0, 242, 234, 0.2);
+        }
+
+        .disclaimer-badge {
+            background: rgba(255, 51, 102, 0.1);
+            color: var(--private-danger);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 51, 102, 0.2);
+        }
+
+        .disclaimer-card h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            letter-spacing: -1px;
+        }
+
+        .disclaimer-card p {
+            color: #aaa;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .auth-box {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .auth-box input {
+            width: 100%;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .auth-box input:focus {
+            border-color: var(--private-accent);
+            background: rgba(0, 242, 234, 0.05);
+            box-shadow: 0 0 20px rgba(0, 242, 234, 0.1);
+        }
+
+        .enter-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--private-accent);
+            color: #000;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .enter-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 242, 234, 0.4);
+            filter: brightness(1.1);
+        }
+
+        /* Reel Player - Hidden by default */
+        #reel-player-container {
+            display: none;
+            width: 100%;
+            background: #000;
+            aspect-ratio: 16/9;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 30px 100px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        #reel-player-container.unlocked {
+            display: block;
+            animation: fadeIn 1s ease;
+        }
+
+        #error-msg {
+            color: var(--private-danger);
+            margin-top: 1rem;
+            font-weight: 600;
+            display: none;
+        }
+
+        .back-home {
+            display: block;
+            margin-top: 3rem;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-home:hover {
+            color: var(--private-accent);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Visual background effects */
+        .bg-glow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at center, rgba(0, 242, 234, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+
+    <div class="private-container">
+        <!-- Auth View -->
+        <div id="auth-view" class="disclaimer-card">
+            <span class="disclaimer-badge"><i class="fas fa-shield-halved"></i> Private Access</span>
+            <h1>Confidential Reel</h1>
+            <p>This page contains technical art demonstrations under Non-Disclosure Agreement. Authorized access only. Do not distribute or record.</p>
+            
+            <div class="auth-box">
+                <input type="password" id="pass-input" placeholder="ACCESS KEY" autocomplete="off">
+                <button id="auth-btn" class="enter-btn">Watch</button>
+                <div id="error-msg">INVALID KEY - ACCESS DENIED</div>
+            </div>
+        </div>
+
+        <!-- Reel View (Visible after Auth) -->
+        <div id="reel-view" style="display: none;">
+            <div class="disclaimer-badge" style="background: rgba(0, 242, 234, 0.1); color: var(--private-accent); border-color: rgba(0, 242, 234, 0.2);">
+                <i class="fas fa-eye"></i> Authorized Session Active
+            </div>
+            <h2 style="margin-bottom: 2rem; font-family: 'Space Grotesk'; font-size: 2.5rem;">Tech-Art Portfolio Reel</h2>
+            
+            <div id="reel-player-container">
+                <!-- Video will be injected here -->
+            </div>
+            
+            <p style="margin-top: 2rem; color: #555; font-size: 0.9rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Protected NDA Material. This video session is temporary. 
+                <br>Contact <strong>danielrojas.1429@gmail.com</strong> for inquiries.
+            </p>
+        </div>
+
+        <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Public Portfolio</a>
+    </div>
+
+    <script>
+        const passInput = document.getElementById('pass-input');
+        const authBtn = document.getElementById('auth-btn');
+        const errorMsg = document.getElementById('error-msg');
+        const authView = document.getElementById('auth-view');
+        const reelView = document.getElementById('reel-view');
+        const playerContainer = document.getElementById('reel-player-container');
+
+        // Check if Key is in URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlKey = urlParams.get('key');
+
+        if (urlKey) {
+            passInput.value = urlKey;
+            setTimeout(validateKey, 500); // Auto-validate if link includes key
+        }
+
+        function validateKey() {
+            const key = passInput.value;
+            if (key === 'drojasreel26') {
+                loadPrivateData();
+            } else {
+                errorMsg.style.display = 'block';
+                passInput.style.borderColor = '#ff3366';
+                setTimeout(() => {
+                    passInput.style.borderColor = '';
+                }, 1000);
+            }
+        }
+
+        async function loadPrivateData() {
+            try {
+                const response = await fetch('assets/classified_data.json?v=' + Date.now());
+                const data = await response.json();
+                
+                if (data.privateReel) {
+                    const reelUrl = atob(data.privateReel);
+                    renderVideo(reelUrl);
+                    
+                    authView.style.display = 'none';
+                    reelView.style.display = 'block';
+                    playerContainer.classList.add('unlocked');
+                }
+            } catch (err) {
+                errorMsg.textContent = "Error loading secure stream. Try again.";
+                errorMsg.style.display = 'block';
+            }
+        }
+
+        function renderVideo(url) {
+            playerContainer.innerHTML = '';
+            const videoId = url.split('/').pop();
+            
+            if (url.includes('vimeo')) {
+                const iframe = document.createElement('iframe');
+                iframe.src = `https://player.vimeo.com/video/${videoId}?autoplay=1&muted=0&color=00f2ea`;
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.style.border = '0';
+                iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+                playerContainer.appendChild(iframe);
+            } else if (url.includes('youtube') || url.includes('youtu.be')) {
+                const iframe = document.createElement('iframe');
+                iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.style.border = '0';
+                iframe.allow = 'autoplay; encrypted-media; gyroscope; picture-in-picture';
+                playerContainer.appendChild(iframe);
+            } else {
+                const video = document.createElement('video');
+                video.src = url;
+                video.controls = true;
+                video.autoplay = true;
+                video.style.width = '100%';
+                video.style.height = '100%';
+                playerContainer.appendChild(video);
+            }
+        }
+
+        authBtn.addEventListener('click', validateKey);
+        passInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') validateKey();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "privateReel": "aHR0cHM6Ly95b3V0dS5iZS9FR05xT3phbUJUbw==",
+  "projects": [
+    {
+      "title": "[NDA] High-Fidelity Character Shader",
+      "category": "shaders",
+      "tags": ["UE5", "NDA", "Classified"],
+      "size": "large",
+      "description": "Proprietary shader framework for unannounced high-fidelity project. Features advanced multi-layered surface logic and custom renderer hooks for realistic skin and fabric response.",
+      "thumbnail": "assets/uploads/screenshot_3.png",
+      "gallery": [],
+      "isConfidential": true
+    },
+    {
+      "title": "[NDA] Optimized Destruction Pipeline",
+      "category": "optimization",
+      "tags": ["UE5", "Chaos", "TechArt"],
+      "size": "medium",
+      "description": "Custom tools and pipeline for large-scale environmental destruction. Optimized geometry collections and field interactions for stable 60fps performance on console.",
+      "thumbnail": "assets/uploads/daniel-rojas-logos.jpg",
+      "gallery": [],
+      "isConfidential": true
+    }
+  ]
+}

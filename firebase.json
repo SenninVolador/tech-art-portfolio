@@ -8,6 +8,10 @@
       "*.rar",
       "*.zip",
       "*.md",
+      "*.pdf",
+      "*.png",
+      "**/*.mov",
+      "admin/**",
       "PROBAR_DASHBOARD_LOCAL.md"
     ]
   }

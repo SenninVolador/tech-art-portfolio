@@ -1,14 +1,16 @@
 :root {
-    --bg-color: #0a0a0a;
-    --surface-color: #161616;
-    --surface-hover: #222222;
+    --bg-color: #050505;
+    --surface-color: #0f0f0f;
+    --surface-hover: #1a1a1a;
     --text-primary: #ffffff;
-    --text-secondary: #a0a0a0;
+    --text-secondary: #aaaaaa;
     --accent-color: #00f2ea;
-    --accent-dim: rgba(0, 242, 234, 0.1);
-    --border-color: #333;
+    --accent-secondary: #ff00c1;
+    --accent-gradient: linear-gradient(135deg, #00f2ea 0%, #0055ff 100%);
+    --accent-dim: rgba(0, 242, 234, 0.05);
+    --border-color: rgba(255, 255, 255, 0.08);
     --gap: 1.5rem;
-    --transition-speed: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --transition-speed: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
@@ -44,15 +46,21 @@ a {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1.5rem 3rem;
+    padding: 1.2rem 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    background: rgba(10, 10, 10, 0.8);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(5, 5, 5, 0.7);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-color);
+    transition: padding 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 0.8rem 4rem;
+    background: rgba(5, 5, 5, 0.9);
 }
 
 .logo {
@@ -143,29 +151,7 @@ a {
     justify-content: center;
     text-align: center;
     overflow: hidden;
-}
-
-.video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: #000;
-}
-
-.video-placeholder {
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #333;
-    font-family: 'Space Grotesk';
-    font-size: 2rem;
-    opacity: 0.5;
+    background: radial-gradient(circle at 50% 50%, #0a0a0a 0%, #000 100%);
 }
 
 .hero-content {
@@ -175,11 +161,12 @@ a {
 }
 
 .hero h1 {
-    font-size: 5rem;
-    line-height: 1;
-    margin-bottom: 1rem;
+    font-size: clamp(3rem, 10vw, 6rem);
+    line-height: 0.9;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: -2px;
+    letter-spacing: -3px;
+    font-weight: 800;
 }
 
 /* Simple Glitch Effect on Hover and JS Interval */
@@ -287,16 +274,17 @@ a {
 .project-card {
     position: relative;
     background: var(--surface-color);
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    border: 1px solid transparent;
+    transition: all var(--transition-speed);
+    border: 1px solid var(--border-color);
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--border-color);
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(0, 242, 234, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 242, 234, 0.1);
     z-index: 10;
 }
 
@@ -368,6 +356,42 @@ a {
     background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));
 }
 
+.confidential-btn {
+    border: 1px dashed rgba(255, 51, 102, 0.4);
+    background: rgba(255, 51, 102, 0.05);
+}
+
+.confidential-btn:hover {
+    background: rgba(255, 51, 102, 0.15);
+    border-color: #ff3366;
+    color: #ff3366;
+}
+
+.confidential-btn.unlocked {
+    border-style: solid;
+    background: rgba(0, 242, 234, 0.1);
+    border-color: #00f2ea;
+    color: #00f2ea !important;
+}
+
+.confidential-btn.unlocked.active {
+    background: #00f2ea;
+    color: #000 !important;
+}
+
+.relock-btn {
+    background: rgba(0, 242, 234, 0.1) !important;
+    border: 1px solid #00f2ea !important;
+    color: #00f2ea !important;
+    padding: 0.8rem 1rem !important;
+    min-width: unset !important;
+}
+
+.relock-btn:hover {
+    background: #ff3366 !important;
+    border-color: #ff3366 !important;
+    color: #fff !important;
+}
 .overlay h3 {
     font-size: 1.2rem;
     margin-bottom: 0.3rem;
@@ -385,8 +409,8 @@ a {
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
     margin-right: 0.3rem;
-    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 /* About Section */
@@ -544,7 +568,14 @@ footer {
     max-width: 90%;
     overflow-x: auto;
     white-space: nowrap;
-    scrollbar-width: none;
+    scrollbar-width: thin;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+.view-toggle::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
 }
 
 .view-toggle::-webkit-scrollbar {
@@ -942,7 +973,8 @@ footer {
     }
 
     .project-card {
-        min-height: auto;
+        min-height: 0;
+        height: auto;
     }
 
     /* Important: Force aspect ratio to prevent cropping */
@@ -1002,3 +1034,157 @@ footer {
         width: auto;
     }
 }
+
+/* ==========================================================================
+   ADVANCED TECH-ART VISUALS (OPTIONS 4, 5, 6)
+   ========================================================================== */
+
+/* 2. Blueprint Wires & Connector */
+.resume-timeline::after {
+    /* Background grid effect for blueprint look */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(var(--border-color) 0.5px, transparent 0.5px);
+    background-size: 20px 20px;
+    z-index: -1;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.blueprint-connector {
+    position: absolute;
+    top: 0;
+    left: -2.6rem;
+    width: 2rem;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.blueprint-path {
+    fill: none;
+    stroke: var(--accent-color);
+    stroke-width: 1.5;
+    stroke-dasharray: 4, 4;
+    opacity: 0.3;
+}
+
+.blueprint-pulse {
+    fill: var(--accent-color);
+    filter: drop-shadow(0 0 3px var(--accent-color));
+}
+
+/* 3. Section Transitions & Dissolve Styles */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Tech-Art Decoration: Scanline Overlay */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.05) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.01), rgba(0, 255, 0, 0.005), rgba(0, 0, 255, 0.01));
+    z-index: 10000;
+    background-size: 100% 4px, 3px 100%;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+/* Glitch Effect on logo */
+#xyz-logo:hover .letter-x,
+#xyz-logo:hover .letter-y,
+#xyz-logo:hover .letter-z {
+    animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+/* ==========================================================================
+   CONFIDENTIAL PROJECTS & UNLOCK UI
+   ========================================================================== */
+
+.confidential-btn {
+    border: 1px dashed rgba(255, 51, 102, 0.4) !important;
+    background: rgba(255, 51, 102, 0.05) !important;
+    transition: all 0.3s ease !important;
+}
+
+.confidential-btn:hover {
+    background: rgba(255, 51, 102, 0.15) !important;
+    border-color: #ff3366 !important;
+    color: #ff3366 !important;
+}
+
+.confidential-btn.unlocked {
+    border-style: solid !important;
+    background: rgba(0, 242, 234, 0.1) !important;
+    border-color: #00f2ea !important;
+    color: #00f2ea !important;
+}
+
+.confidential-btn.unlocked.active {
+    background: #00f2ea !important;
+    color: #000 !important;
+    border-color: #00f2ea !important;
+}
+
+.relock-btn {
+    background: rgba(0, 242, 234, 0.1) !important;
+    border: 1px solid #00f2ea !important;
+    color: #00f2ea !important;
+    padding: 0.8rem 1rem !important;
+    min-width: unset !important;
+}
+
+.relock-btn:hover {
+    background: #ff3366 !important;
+    border-color: #ff3366 !important;
+    color: #fff !important;
+}
+
+.reel-btn {
+    background: linear-gradient(135deg, #00f2ea 0%, #0044ff 100%) !important;
+    border: none !important;
+    color: #000 !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 15px rgba(0, 242, 234, 0.3);
+    padding: 0.8rem 1.4rem !important;
+}
+
+.reel-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 242, 234, 0.5);
+    filter: brightness(1.1);
+}
+
+.confidential-tag {
+    background: rgba(255, 51, 102, 0.2) !important;
+    border: 1px solid #ff3366 !important;
+    color: #ff3366 !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+}

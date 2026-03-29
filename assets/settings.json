@@ -1,6 +1,40 @@
 {
-  "heroSpecialties": "Shaders | VFX | Lighting",
+  "heroSpecialties": "Real-time VFX | Stylized Shaders | Tech Art",
+  "resumeSubtitle": "Professional Experience",
+  "resumeHistory": [
+    {
+      "company": "PunkRobot",
+      "role": "Lighting Artist",
+      "period": "Sep 2025 – Feb 2026",
+      "description": "Lighting and rendering for the feature film 'Brave Cat'. Solved complex lighting challenges and optimized scenes for high-fidelity production."
+    },
+    {
+      "company": "Dual Effect",
+      "role": "Technical Artist (VFX, Shaders & Optimization)",
+      "period": "2024 – 2025",
+      "description": "Architected shader systems and custom post-process VFX for 'Tormented Souls 2' in UE5. Specialized in stylized horror aesthetics and performance optimization."
+    },
+    {
+      "company": "Nimble Giant",
+      "role": "VFX & Technical Artist",
+      "period": "2022 – 2024",
+      "description": "Developed VFX and shaders for high-reach Fortnite Creative ecosystems. Engineered high-performance Niagara systems for multiplayer AAA titles."
+    },
+    {
+      "company": "Duoc UC",
+      "role": "3D, Lighting and Rendering Instructor",
+      "period": "2020 – 2022",
+      "description": "As an instructor at Duoc UC, I led courses in 3D production, lighting, and off line rendering. My role involved curriculum design for a solid understanding of quality rendering, lighting and workflow used in major studies."
+    },
+    {
+      "company": "Behaviour Interactive",
+      "role": "QA Production Support",
+      "period": "2015",
+      "description": "Production logic support for Fallout Shelter. Gained deep insights into mobile pipeline optimization and high-scale production."
+    }
+  ],
   "footerText": "© 2026 Daniel Rojas",
+  "resumeTitle": "Resume",
   "aboutTitle": "About Me",
   "socialLinks": [
     {
@@ -10,61 +44,40 @@
     },
     {
       "platform": "ArtStation",
-      "url": "https://artstation.com/danielrojas",
+      "url": "https://www.artstation.com/wakefield",
       "icon": "fa-artstation"
     },
     {
       "platform": "Flipped Normals",
-      "icon": " fa-cube",
-      "url": "https://flippednormals.com/creator/hikari?tag=trending"
+      "icon": "fa-cart-shopping",
+      "url": "https://flippednormals.com/creator/hikari"
     }
   ],
-  "aboutDescription": "I am a VFX and Technical Artist with over 8 years of experience, specializing in Unreal Engine and Maya. My expertise evolved from offline rendering to real-time VFX for AAA titles like Fortnite. I have contributed to everything from animated films like 'Brave Cat' to technical art for games like 'Tormented Souls 2', always focusing on bridging the gap between artistic vision and technical performance.",
+  "resume": {
+    "resumeTitle": "RESUME",
+    "resumeSubtitle": "R",
+    "resumeDownloadUrl": "CV_DanielRojas_2025.html"
+  },
+  "aboutDescription": "VFX & Technical Artist with over 8 years of experience in Maya and 4 years building high-end stylized solutions. From visual effects and lighting for animated features at Oscar-winning studio PunkRobot ('Brave Cat') to architecting advanced shader systems for AAA-scaled projects. My core expertise lies in Unreal Engine 5 (Niagara, Material Graph) and shader-driven visual solutions, focusing on capturing artistic style through technical innovation. I specialize in bridging the gap between artistic vision and engine constraints, ensuring that every effect is not only visually stunning but also performant across all platforms.",
   "aboutSkills": [
-    "Unreal Engine 5",
-    "Maya",
-    "Shaders",
-    "VFX",
-    "Lighting",
+    "Real-time VFX (Niagara UE5)",
+    "Stylized Shaders & Material Logic",
+    "Unreal Engine 5 (Lumen/GPULM)",
+    "Houdini (VFX Production)",
+    "Lighting for Games",
+    "Maya/Python Pipeline Automation",
+    "Performance Optimization",
     "Git/Perforce"
   ],
-  "resumeTitle": "Resume",
-  "resumeSubtitle": "Professional Experience",
-  "resumeDownloadUrl": "assets/RESUME_DR_2025.pdf",
-  "resumeHistory": [
-    {
-      "company": "PunkRobot",
-      "role": "Lighting",
-      "period": "Aug 2024 – Feb 2025",
-      "description": "Lighting and VFX for the movie 'Brave Cat' using Redshift and Maya."
-    },
-    {
-      "company": "Dual Effect",
-      "role": "Technical / Lighting Art",
-      "period": "Aug 2024 – Feb 2025",
-      "description": "VFX and shaders for 'Tormented Souls 2'. Optimization of lighting and models."
-    },
-    {
-      "company": "Nimble Giant",
-      "role": "TechArt and VFX",
-      "period": "Jun 2022 – Aug 2024",
-      "description": "VFX and shaders for Fortnite and upcoming AAA multiplayer shooter."
-    },
-    {
-      "company": "Birds Were Singing",
-      "role": "Director and Tech Art",
-      "period": "Jan 2019 – Present",
-      "description": "General direction and tech art focusing on lighting, VFX, and shaders."
-    }
-  ],
-  "siteTitle": "Technical Artist Portfolio",
-  "heroSubtitle": "Tech Artist",
+  "siteTitle": "Daniel Rojas | VFX | Lighting | TechArt",
+  "heroSubtitle": "VFX | Lighting | TechArt",
   "siteName": "DANIEL ROJAS",
-  "siteDescription": "Portfolio of a Senior Technical Artist specializing in Unreal Engine, Shaders, and Tools.",
+  "siteDescription": "Portfolio of a VFX & Technical Artist specializing in Stylized Effects, Niagara, and Shader Development.",
   "contactTitle": "Let's Connect",
   "navLogoName": "DANIEL",
-  "contactEmail": "hello@danielrojas.dev",
-  "contactDescription": "Have a project in mind or want to discuss tech art? Drop me a line!",
+  "resumeDownloadUrl": "CV_DanielRojas_2025.html",
+  "contactEmail": "danielrojas.1429@gmail.com",
+  "contactDescription": "Want to talk VFX or Tech Art? Let's build something amazing!",
   "heroTitle": "DANIEL ROJAS",
   "navLogoLetters": "XYZ"
 }
