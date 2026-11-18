@@ -9,17 +9,17 @@
     ],
     "size": "large",
     "description": "A concrete wall that breaks under accumulated bullet damage.<div><br>The first shot leaves a crater and dust; nearby hits release chunks; several open a hole through the wall to the rebar. Debris stays on the floor and everything kicks up grey dust.</div><div><br>Chaos destruction with Niagara. Materials are built with nodes only and the Niagara systems use stock modules.</div>",
-    "thumbnail": "assets/uploads/fx/chaos_wall.jpg",
+    "thumbnail": "assets/uploads/fx2/wall_close.jpg",
     "gallery": [
       {
         "type": "video",
-        "src": "assets/uploads/fx/chaos_wall.mp4",
-        "label": "Wall, accumulated damage"
+        "src": "assets/uploads/fx2/wall_close.mp4",
+        "label": "Close"
       },
       {
         "type": "video",
-        "src": "assets/uploads/fx/chaos_pillar.mp4",
-        "label": "Tiled pillar"
+        "src": "assets/uploads/fx2/wall_wide.mp4",
+        "label": "Wide"
       }
     ]
   },
@@ -31,53 +31,19 @@
       "Niagara",
       "Fire"
     ],
-    "size": "medium",
+    "size": "large",
     "description": "A molotov that behaves the same whether it breaks mid-air or on impact.<div><br>The fuel splashes out, ignites into a fireball, then falls with real collision against the level and the fire grows where it lands. Walls stop the fuel, so a corner keeps the fire contained. Burning puddles stay as decals.</div><div><br>Stock Niagara modules, node-only materials and quality scalability through an Effect Type.</div>",
-    "thumbnail": "assets/uploads/fx/mol_burn.jpg",
+    "thumbnail": "assets/uploads/fx2/molotov_air.jpg",
     "gallery": [
       {
         "type": "video",
-        "src": "assets/uploads/fx/mol_air.mp4",
-        "label": "Air burst and ground fire"
+        "src": "assets/uploads/fx2/molotov_air.mp4",
+        "label": "Air burst"
       },
       {
         "type": "video",
-        "src": "assets/uploads/fx/mol_burn.mp4",
-        "label": "Character on fire"
-      }
-    ]
-  },
-  {
-    "title": "GunFX: muzzle flash and impacts",
-    "category": "vfx",
-    "tags": [
-      "UE5.7",
-      "Niagara",
-      "Optimization"
-    ],
-    "size": "medium",
-    "description": "Weapon VFX with a dusty, grounded look.<div><br>Shotgun as a single system for 8 pellets, impacts for concrete, metal and flesh (a liquid splatter simulated in Maya Bifrost and rendered in Arnold as a flipbook), wound decals and short light pulses.</div><div><br>Performance pass: no GPU sorting, cutout instead of translucency on flashes and smoke, and a pooling test. Materials with nodes only.</div>",
-    "thumbnail": "assets/uploads/fx/gun_concrete.jpg",
-    "gallery": [
-      {
-        "type": "video",
-        "src": "assets/uploads/fx/gun_shotgun.mp4",
-        "label": "Shotgun"
-      },
-      {
-        "type": "video",
-        "src": "assets/uploads/fx/gun_concrete.mp4",
-        "label": "Concrete"
-      },
-      {
-        "type": "video",
-        "src": "assets/uploads/fx/gun_metal.mp4",
-        "label": "Metal"
-      },
-      {
-        "type": "video",
-        "src": "assets/uploads/fx/gun_flesh.mp4",
-        "label": "Flesh"
+        "src": "assets/uploads/fx2/molotov_floor.mp4",
+        "label": "Floor splash"
       }
     ]
   },
@@ -89,33 +55,19 @@
       "Niagara",
       "Post-process"
     ],
-    "size": "medium",
+    "size": "large",
     "description": "A dense sandstorm for exteriors and interiors, with the Steam Deck as the minimum target.<div><br>One Material Parameter Collection drives both the post-process veil and the particles. A controller adds gusts, wind travel and interior volumes, and everything can be animated in Sequencer or Blueprint.</div>",
-    "thumbnail": "assets/uploads/fx/sandstorm.jpg",
+    "thumbnail": "assets/uploads/fx2/sandstorm.jpg",
     "gallery": [
       {
         "type": "video",
-        "src": "assets/uploads/fx/sandstorm.mp4",
-        "label": "Walking and running"
-      }
-    ]
-  },
-  {
-    "title": "PaperFX: papers kicked by footsteps",
-    "category": "vfx",
-    "tags": [
-      "UE5.7",
-      "Niagara GPU",
-      "No Blueprint"
-    ],
-    "size": "medium",
-    "description": "Newspapers and posters on the floor that react to footsteps.<div><br>Each step kicks them: they slide, lift, spin and land flat again, sometimes face down. A second system sends papers across the scene with the wind.</div><div><br>Two GPU Niagara systems with no Blueprint or runtime code: node-only material and modules built from nodes.</div>",
-    "thumbnail": "assets/uploads/fx/paper_walk.jpg",
-    "gallery": [
+        "src": "assets/uploads/fx2/sandstorm_walk.mp4",
+        "label": "Walking"
+      },
       {
         "type": "video",
-        "src": "assets/uploads/fx/paper_walk.mp4",
-        "label": "Footsteps"
+        "src": "assets/uploads/fx2/sandstorm_run.mp4",
+        "label": "Running"
       }
     ]
   },
