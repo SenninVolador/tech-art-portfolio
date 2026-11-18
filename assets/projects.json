@@ -72,25 +72,6 @@
     ]
   },
   {
-    "title": "PixelDiorama Kit",
-    "category": "tools",
-    "tags": [
-      "Unreal Engine",
-      "Plugin",
-      "C++"
-    ],
-    "size": "large",
-    "description": "Unreal Engine plugin that puts pixel-art characters inside real 3D environments: lit by the scene, casting shadows, with the tilt-shift look of a miniature diorama.<div><br>Aseprite import, 8-direction sprite baking from 3D characters, 11 look presets, pixel-art weather and effects, a playable walker with dialogue, and an editor panel. C++ source and 160+ Blueprint functions.</div><div><br><a href=\"https://www.fab.com/listings/3bf04938-caac-4cd4-88d1-85b1317f39bb\" target=\"_blank\" rel=\"noopener\">View on Fab</a></div>",
-    "thumbnail": "assets/uploads/games/pixeldiorama.jpg",
-    "gallery": [
-      {
-        "type": "image",
-        "src": "assets/uploads/games/pixeldiorama.jpg",
-        "label": "Kit"
-      }
-    ]
-  },
-  {
     "title": "Tormented Souls 2: tech art & lighting",
     "category": "lighting",
     "tags": [
@@ -300,6 +281,25 @@
         "label": "Movie Trailer",
         "type": "video",
         "src": "https://www.youtube.com/watch?v=1vA8750S--M"
+      }
+    ]
+  },
+  {
+    "title": "PixelDiorama Kit",
+    "category": "tools",
+    "tags": [
+      "Unreal Engine",
+      "Plugin",
+      "C++"
+    ],
+    "size": "large",
+    "description": "Unreal Engine plugin that puts pixel-art characters inside real 3D environments: lit by the scene, casting shadows, with the tilt-shift look of a miniature diorama.<div><br>Aseprite import, 8-direction sprite baking from 3D characters, 11 look presets, pixel-art weather and effects, a playable walker with dialogue, and an editor panel. C++ source and 160+ Blueprint functions.</div><div><br><a href=\"https://www.fab.com/listings/3bf04938-caac-4cd4-88d1-85b1317f39bb\" target=\"_blank\" rel=\"noopener\">View on Fab</a></div>",
+    "thumbnail": "assets/uploads/games/pixeldiorama.jpg",
+    "gallery": [
+      {
+        "type": "image",
+        "src": "assets/uploads/games/pixeldiorama.jpg",
+        "label": "Kit"
       }
     ]
   }
