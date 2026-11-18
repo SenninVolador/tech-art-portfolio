@@ -128,11 +128,6 @@
       "platform": "ArtStation",
       "url": "https://www.artstation.com/wakefield",
       "icon": "fa-artstation"
-    },
-    {
-      "platform": "itch.io",
-      "url": "https://lord-dunsany.itch.io/",
-      "icon": "fa-itch-io"
     }
   ],
   "resume": {

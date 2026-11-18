@@ -350,43 +350,5 @@
         "src": "https://www.youtube.com/watch?v=1vA8750S--M"
       }
     ]
-  },
-  {
-    "title": "The Gods Know",
-    "category": "games",
-    "tags": [
-      "Phaser",
-      "Pixel art",
-      "Original VFX"
-    ],
-    "size": "medium",
-    "description": "A knight descends an inverted tower. Shoot the souls; they split.<div><br>Browser action roguelike with original pixel-art VFX, music and sound.</div><div><br><a href=\"https://lord-dunsany.itch.io/the-gods-know\" target=\"_blank\" rel=\"noopener\">Play on itch.io</a></div>",
-    "thumbnail": "assets/uploads/games/the-gods-know.jpg",
-    "gallery": [
-      {
-        "type": "image",
-        "src": "assets/uploads/games/the-gods-know.jpg",
-        "label": "Cover"
-      }
-    ]
-  },
-  {
-    "title": "Primordio",
-    "category": "games",
-    "tags": [
-      "Phaser",
-      "Pixel art",
-      "Simulation"
-    ],
-    "size": "medium",
-    "description": "Evolve from a fish to the first fire.<div><br>A small browser simulation game.</div><div><br><a href=\"https://lord-dunsany.itch.io/primordio\" target=\"_blank\" rel=\"noopener\">Play on itch.io</a></div>",
-    "thumbnail": "assets/uploads/games/primordio.jpg",
-    "gallery": [
-      {
-        "type": "image",
-        "src": "assets/uploads/games/primordio.jpg",
-        "label": "Cover"
-      }
-    ]
   }
 ]
