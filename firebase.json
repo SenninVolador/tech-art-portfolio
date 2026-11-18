@@ -7,12 +7,34 @@
       "**/node_modules/**",
       "*.rar",
       "*.zip",
-      "*.md",
-      "*.pdf",
-      "*.png",
       "**/*.mov",
+      "*.md",
+      "server.js",
       "admin/**",
-      "PROBAR_DASHBOARD_LOCAL.md"
+      "CV_DanielRojas_2025.html",
+      "CV_Daniel_Rojas_2025.pdf",
+      "assets/RESUME_DR_2025.pdf",
+      "package*.json"
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(mp4|jpg|jpeg|png|webp|svg|pdf)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=604800"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(js|css|json)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=300"
+          }
+        ]
+      }
     ]
   }
 }

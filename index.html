@@ -4,9 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daniel Rojas | VFX | Lighting | TechArt</title>
+  <title>Daniel Rojas | VFX &amp; Technical Artist</title>
   <meta name="description"
-    content="Portfolio of Daniel Rojas, VFX and Technical Artist specializing in Lighting, Shaders, and VFX in Unreal Engine.">
+    content="Daniel Rojas is a VFX and Technical Artist working in Unreal Engine 5: Niagara VFX, shaders, lighting and performance optimization. Credits include Tormented Souls 2 and Fortnite Creative.">
+  <meta name="theme-color" content="#0f1012">
+  <link rel="canonical" href="https://danielrojas.xyz/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Daniel Rojas">
+  <meta property="og:title" content="Daniel Rojas | VFX &amp; Technical Artist">
+  <meta property="og:description" content="Niagara VFX, shaders, lighting and optimization in Unreal Engine 5. Watch the reel.">
+  <meta property="og:url" content="https://danielrojas.xyz/">
+  <meta property="og:image" content="https://danielrojas.xyz/assets/reel/reel-poster.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Daniel Rojas | VFX &amp; Technical Artist">
+  <meta name="twitter:description" content="Niagara VFX, shaders, lighting and optimization in Unreal Engine 5.">
+  <meta name="twitter:image" content="https://danielrojas.xyz/assets/reel/reel-poster.jpg">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Google Fonts -->
@@ -17,7 +29,8 @@
     rel="stylesheet">
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="style.css?v=9">
+  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="theme.css?v=1">
 </head>
 
 <body>
@@ -25,8 +38,7 @@
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <div class="logo">
-        <span class="logo-text">DANIEL <span class="xyz-wrapper" id="xyz-logo"><span class="letter-x">X</span><span
-              class="letter-y">Y</span><span class="letter-z">Z</span></span></span>
+        <a href="#top" class="logo-text">Daniel Rojas</a>
       </div>
 
       <button class="hamburger-btn" id="hamburger-btn" aria-label="Menu">
@@ -35,8 +47,7 @@
 
       <ul class="nav-links" id="nav-links">
         <li><a href="#work">Work</a></li>
-        <li><a href="https://flippednormals.com/creator/hikari" target="_blank" rel="noopener noreferrer">Plugins</a>
-        </li>
+
         <li><a href="#resume">Resume</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact" class="cta-btn">Contact</a></li>
@@ -45,16 +56,25 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero reveal-on-scroll">
-    <canvas id="tech-canvas"></canvas>
-
-    <div class="hero-content">
-      <h1 class="glitch" id="hero-title" data-text="DANIEL ROJAS">DANIEL ROJAS</h1>
-      <p class="subtitle" id="hero-subtitle">VFX | Lighting | TechArt</p>
-      <p class="mini-subtitle" id="hero-specialties">Lighting | Shaders | VFX</p>
-      <a href="#work" class="scroll-down" aria-label="Scroll down to work section">
-        <i class="fa-solid fa-arrow-down"></i>
-      </a>
+  <header class="hero" id="top">
+    <video class="hero-video" data-src="assets/reel/hero-loop.mp4" poster="assets/reel/hero-poster.jpg" muted loop
+      playsinline preload="metadata" aria-hidden="true"></video>
+    <div class="hero-shade"></div>
+    <div class="hero-container">
+      <div class="hero-split">
+        <div class="hero-intro">
+          <p class="eyebrow">Technical Artist &middot; Santiago, Chile</p>
+          <h1><span class="name" id="hero-title">Daniel Rojas</span></h1>
+          <p class="subtitle" id="hero-subtitle">VFX &amp; Technical Artist</p>
+          <p class="mini-subtitle" id="hero-specialties">Real-time VFX | Shaders | Optimization | Unreal Engine 5</p>
+          <div class="hero-buttons">
+            <button type="button" id="watch-reel" class="btn"><i class="fa-solid fa-play"></i>&nbsp; Watch reel</button>
+            <a href="#work" class="btn btn-outline">Selected work</a>
+            <a href="DanielRojas_CV_2026.pdf" class="btn btn-outline" target="_blank" rel="noopener">CV</a>
+          </div>
+          <p class="availability">Open to relocation to Japan &middot; visa sponsorship required</p>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -69,17 +89,11 @@
              <i class="fa-solid fa-play"></i> Watch Private Reel
           </button>
           <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="vfx">VFX</button>
           <button class="filter-btn" data-filter="shaders">Shaders</button>
-          <button class="filter-btn" data-filter="tools">Tools</button>
-          <button class="filter-btn" data-filter="plugins">Plugins</button>
-          <button class="filter-btn" data-filter="optimization">Optimization</button>
           <button class="filter-btn" data-filter="lighting">Lighting</button>
-          <button id="unlock-btn" class="filter-btn confidential-btn">
-            <i class="fa-solid fa-lock"></i> Confidential
-          </button>
-          <button id="relock-btn" class="filter-btn relock-btn" style="display: none;" title="Lock Confidential Content">
-            <i class="fa-solid fa-lock-open"></i>
-          </button>
+          <button class="filter-btn" data-filter="tools">Tools</button>
+          <button class="filter-btn" data-filter="games">Games</button>
         </div>
       </div>
 
@@ -94,12 +108,33 @@
         <div class="resume-header">
           <h2 id="resume-title">Resume</h2>
           <p id="resume-subtitle">Professional Journey</p>
-          <a href="CV_DanielRojas_2025.html" class="download-btn" id="resume-download" target="_blank">
+          <a href="DanielRojas_CV_2026.pdf" class="download-btn" id="resume-download" target="_blank" rel="noopener">
             <i class="fa-solid fa-file-pdf"></i> View Full CV
           </a>
+          <button type="button" class="download-btn upload-cv-btn" id="upload-cv-btn" style="display: none; background: transparent; border: 1px dashed var(--accent-color); color: var(--accent-color); margin-left: 10px;">
+            <i class="fa-solid fa-upload"></i> Upload PDF
+          </button>
+          <input type="file" id="upload-cv-file" style="display: none;" accept=".pdf">
         </div>
-        <div class="resume-timeline" id="resume-timeline">
-          <!-- Experience will be injected by JS -->
+        <div class="resume-split-grid">
+          <div class="resume-col">
+            <h3 class="col-title"><i class="fa-solid fa-film"></i> Productions</h3>
+            <div id="productions-timeline" class="productions-timeline">
+              <!-- Projects will be injected by JS -->
+            </div>
+            <div class="production-add-btn-container">
+              <button id="add-production-btn" class="btn btn-outline" style="width: 100%; margin-top: 1.5rem;"><i class="fa-solid fa-plus"></i> Add Production</button>
+            </div>
+          </div>
+          <div class="resume-col">
+            <h3 class="col-title"><i class="fa-solid fa-briefcase"></i> Experience</h3>
+            <div id="experience-timeline" class="experience-timeline">
+              <!-- Experience will be injected by JS -->
+            </div>
+            <div class="production-add-btn-container">
+              <button id="add-experience-btn" class="btn btn-outline" style="width: 100%; margin-top: 1.5rem;"><i class="fa-solid fa-plus"></i> Add Experience</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -111,14 +146,28 @@
           <h2 id="about-title">Bridging Art & Code</h2>
           <p id="about-description">I build the bridges that allow artists to cross the chasm of technical limitations.
           </p>
-          <ul class="skills-list" id="skills-list">
-            <!-- Skills will be populated by JS -->
-          </ul>
+          <div class="skills-two-columns">
+            <div class="skills-column">
+              <h3>Tools</h3>
+              <div id="tools-view">
+                <!-- Dynamically populated by JS -->
+              </div>
+            </div>
+            
+            <div class="skills-column">
+              <h3>Skills</h3>
+              <div id="skills-view">
+                <!-- Dynamically populated by JS -->
+              </div>
+            </div>
+          </div>
+          <input type="file" id="upload-skill-logo-file" style="display: none;" accept="image/*">
         </div>
         <div id="contact" class="contact-wrapper">
           <div class="contact-info">
             <h3 id="contact-title">Connect</h3>
-            <p class="contact-desc" id="contact-description">Available for projects.</p>
+            <p class="contact-desc" id="contact-description">Open to new projects and to relocating to Japan.</p>
+            <a class="contact-email" href="mailto:danielrojas.1429@gmail.com">danielrojas.1429@gmail.com</a>
             <div class="social-links-minimal" id="social-links-container">
               <!-- Social links will be populated by JS -->
             </div>
@@ -153,21 +202,56 @@
     </div>
   </footer>
 
+  <!-- Public reel -->
+  <div id="reel-modal" class="reel-modal" role="dialog" aria-label="Reel">
+    <div class="reel-box">
+      <button type="button" class="reel-close" aria-label="Close">&times;</button>
+      <video data-src="assets/reel/reel.mp4" poster="assets/reel/reel-poster.jpg" controls playsinline
+        preload="none"></video>
+    </div>
+  </div>
+
   <!-- Modal System -->
   <div id="project-modal" class="modal">
     <div class="modal-content">
       <button class="close-modal">&times;</button>
       <div class="modal-body">
-        <div class="modal-media" id="modal-visual-container">
-          <!-- Media will be injected here -->
+        <div class="modal-media-wrapper" style="flex: 1 1 65%; display: flex; flex-direction: column; background: #000; position: relative; min-width: 0;">
+          <div class="modal-media" id="modal-visual-container" style="flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+            <!-- Media will be injected here -->
+          </div>
+          <!-- Slide Control Bar (visible in Edit Mode only) -->
+          <div id="modal-slide-controls" style="display: none; background: rgba(20, 20, 20, 0.95); border-top: 1px solid var(--border-color); padding: 10px 15px; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <!-- Inputs and buttons injected dynamically -->
+          </div>
         </div>
+        
         <!-- Mini view toggle / Tabs -->
         <div class="view-toggle" id="view-toggle">
           <!-- Gallery buttons will be injected here -->
         </div>
+        
         <div class="modal-info">
+          <!-- Project Admin Controls (visible in Edit Mode only) -->
+          <div id="modal-project-admin-controls" style="display: none; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.3); padding: 12px; border-radius: 6px; margin-bottom: 15px; flex-direction: column; gap: 8px;">
+            <div style="font-weight: bold; color: var(--accent-color); font-size: 0.8rem; display: flex; align-items: center; gap: 6px;">
+              <i class="fa-solid fa-screwdriver-wrench"></i> Project Edit Mode
+            </div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+              <button type="button" class="btn btn-outline" id="modal-change-thumb-btn" style="font-size: 0.75rem; padding: 4px 8px; height: auto; line-height: normal; flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 4px;"><i class="fa-solid fa-image"></i> Cover Thumbnail</button>
+              <input type="file" id="modal-change-thumb-file" style="display: none;" accept="image/*">
+              
+              <button type="button" class="btn btn-outline" id="modal-open-full-edit-btn" style="font-size: 0.75rem; padding: 4px 8px; height: auto; line-height: normal; flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 4px;"><i class="fa-solid fa-sliders"></i> Full Settings</button>
+            </div>
+          </div>
+
           <div class="modal-header">
             <h2 id="modal-title">Project Title</h2>
+            <!-- Editable tags area -->
+            <div id="modal-tags-edit-container" style="display: none; margin-top: 8px; width: 100%;">
+              <label style="font-size: 0.75rem; color: var(--text-secondary); display: block; margin-bottom: 2px;">Tags (comma-separated):</label>
+              <input type="text" id="modal-tags-input" style="width: 100%; padding: 4px 8px; font-size: 0.8rem; background: rgba(0,0,0,0.3); border: 1px solid var(--border-color); color: var(--text-primary); border-radius: 4px; font-family: inherit;">
+            </div>
             <div class="modal-tags" id="modal-tags"></div>
           </div>
           <p id="modal-description">Description goes here.</p>
@@ -198,7 +282,94 @@
     </div>
   </div>
 
-  <script src="script.js?v=9"></script>
+  <!-- Live Edit Floating Toolbar -->
+  <div id="edit-toolbar" class="edit-toolbar">
+    <button id="toggle-edit-btn" class="edit-btn"><i class="fa-solid fa-pen-to-square"></i> Edit Portfolio</button>
+    <button id="save-edit-btn" class="edit-btn save-btn" style="display: none;"><i class="fa-solid fa-floppy-disk"></i> Save Changes</button>
+    <button id="cancel-edit-btn" class="edit-btn cancel-btn" style="display: none;"><i class="fa-solid fa-xmark"></i> Cancel</button>
+  </div>
+
+  <!-- Live Edit Project Modal -->
+  <div id="edit-project-modal" class="modal">
+    <div class="modal-content edit-project-content">
+      <button class="close-modal" id="close-project-edit">&times;</button>
+      <h2>Edit Item</h2>
+      <form id="edit-project-form" class="edit-project-form">
+        <input type="hidden" id="edit-proj-id">
+        <input type="hidden" id="edit-proj-type"> <!-- 'portfolio' or 'production' -->
+        
+        <div class="input-group-edit">
+          <label for="edit-proj-title">Title</label>
+          <input type="text" id="edit-proj-title" required>
+        </div>
+        
+        <div class="input-group-edit row-conditional-production">
+          <label for="edit-proj-company">Company/Studio</label>
+          <input type="text" id="edit-proj-company">
+        </div>
+
+        <div class="input-group-edit row-conditional-production">
+          <label for="edit-proj-role">Role</label>
+          <input type="text" id="edit-proj-role">
+        </div>
+
+        <div class="input-group-edit flex-row-edit">
+          <div>
+            <label for="edit-proj-period">Period / Date</label>
+            <input type="text" id="edit-proj-period" placeholder="e.g. 2026 - Present">
+          </div>
+          <div>
+            <label for="edit-proj-category">Category</label>
+            <select id="edit-proj-category">
+              <option value="shaders">Shaders</option>
+              <option value="vfx">VFX</option>
+              <option value="tools">Tools</option>
+              <option value="lighting">Lighting</option>
+              <option value="optimization">Optimization</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-group-edit">
+          <label for="edit-proj-thumbnail">Thumbnail / Image URL</label>
+          <div style="display: flex; gap: 10px;">
+            <input type="text" id="edit-proj-thumbnail" placeholder="assets/uploads/your_image.jpg" style="flex: 1;">
+            <button type="button" class="btn btn-outline" id="upload-proj-thumb-btn" style="padding: 0 1rem; font-size: 0.85rem;"><i class="fa-solid fa-upload"></i> Upload</button>
+            <input type="file" id="upload-proj-thumb-file" style="display: none;" accept="image/*,video/*">
+          </div>
+        </div>
+
+        <div class="input-group-edit">
+          <label for="edit-proj-description">Description</label>
+          <textarea id="edit-proj-description" rows="3" required></textarea>
+        </div>
+
+        <div class="input-group-edit">
+          <label for="edit-proj-tags">Tags (comma-separated)</label>
+          <input type="text" id="edit-proj-tags" placeholder="UE5, Niagara, HLSL">
+        </div>
+
+        <!-- Project Gallery Manager -->
+        <div class="input-group-edit" id="gallery-manager-group" style="display: none; margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
+          <label style="margin-bottom: 0.8rem; display: block; font-weight: bold; color: var(--accent-color);">Project Content Gallery</label>
+          <div id="gallery-items-container">
+            <!-- Dynamic gallery items will be injected by JavaScript -->
+          </div>
+          <button type="button" class="btn btn-outline" id="add-gallery-item-btn" style="width: 100%; margin-top: 10px;">
+            <i class="fa-solid fa-plus"></i> Add Image / Video Slide
+          </button>
+        </div>
+
+        <div class="edit-modal-actions">
+          <button type="submit" class="btn btn-save"><i class="fa-solid fa-check"></i> Apply</button>
+          <button type="button" class="btn btn-outline" id="cancel-project-edit">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js?v=13"></script>
+  <script src="site.js?v=1"></script>
 </body>
 
 </html>

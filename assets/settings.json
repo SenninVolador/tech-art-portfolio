@@ -1,41 +1,123 @@
 {
-  "heroSpecialties": "Real-time VFX | Stylized Shaders | Tech Art",
-  "resumeSubtitle": "Professional Experience",
-  "resumeHistory": [
+  "heroSpecialties": "Real-time VFX | Shaders | Optimization | Unreal Engine 5",
+  "resumeSubtitle": "Selected productions and roles",
+  "resumeProductions": [
     {
       "company": "PunkRobot",
-      "role": "Lighting Artist",
+      "role": "Lighting Artist + VFX",
       "period": "Sep 2025 – Feb 2026",
-      "description": "Lighting and rendering for the feature film 'Brave Cat'. Solved complex lighting challenges and optimized scenes for high-fidelity production."
+      "project": "Brave Cat (Feature Film)",
+      "thumbnail": "assets/uploads/screenshot_3.png",
+      "description": "Lighting (Redshift) for the feature film 'Brave Cat'; also supported VFX work in Maya."
     },
     {
       "company": "Dual Effect",
-      "role": "Technical Artist (VFX, Shaders & Optimization)",
-      "period": "2024 – 2025",
-      "description": "Architected shader systems and custom post-process VFX for 'Tormented Souls 2' in UE5. Specialized in stylized horror aesthetics and performance optimization."
+      "role": "Technical Artist (Lead)",
+      "period": "Aug 2024 – Sep 2025",
+      "project": "Tormented Souls 2",
+      "thumbnail": "assets/uploads/images.jpg",
+      "description": "Rebuilt the VFX and shader pipeline of a UE5 stylized horror game: Niagara effects and HLSL shaders, plus profiling and optimization to hit multi-platform performance targets."
     },
     {
       "company": "Nimble Giant",
-      "role": "VFX & Technical Artist",
-      "period": "2022 – 2024",
-      "description": "Developed VFX and shaders for high-reach Fortnite Creative ecosystems. Engineered high-performance Niagara systems for multiplayer AAA titles."
+      "role": "Technical Artist",
+      "period": "Jun 2022 – Jun 2024",
+      "project": "AAA multiplayer extraction shooter (NDA)",
+      "thumbnail": "assets/uploads/t5jR-4iy_400x400.jpg",
+      "description": "High-performance particles for an unannounced AAA extraction shooter (200+ team, 12 technical):\n\n-Climate VFX such as snow and fog, with their lighting\n-Environment VFX\n-Weapon VFX and shaders: muzzle flashes and bullets"
     },
     {
-      "company": "Duoc UC",
-      "role": "3D, Lighting and Rendering Instructor",
-      "period": "2020 – 2022",
-      "description": "As an instructor at Duoc UC, I led courses in 3D production, lighting, and off line rendering. My role involved curriculum design for a solid understanding of quality rendering, lighting and workflow used in major studies."
+      "company": "Nimble Giant",
+      "role": "Technical Artist",
+      "period": "Jun 2022 – Jun 2024",
+      "project": "Fortnite Creative / UEFN",
+      "thumbnail": "assets/uploads/fortnite_village.jpg",
+      "description": "Niagara VFX and shaders for Fortnite Creative. Worked on the Epic Labs demo map \"Village\"."
     },
     {
       "company": "Behaviour Interactive",
       "role": "QA Production Support",
       "period": "2015",
-      "description": "Production logic support for Fallout Shelter. Gained deep insights into mobile pipeline optimization and high-scale production."
+      "project": "Fallout Shelter",
+      "thumbnail": "assets/uploads/fallout_shelter.png",
+      "description": "Production support on the mobile pipeline and QA workflows."
+    }
+  ],
+  "resumeExperience": [
+    {
+      "company": "BrewMasters Games",
+      "role": "Senior VFX Artist",
+      "period": "Jun 2026 – Present",
+      "project": "UE5 project (remote)",
+      "description": "In charge of VFX for a UE5 project: Niagara systems, materials and shaders."
+    },
+    {
+      "company": "UNIACC",
+      "role": "Instructor, 3D Lighting & Unreal Shaders",
+      "period": "Aug 2026 – Present",
+      "project": "Videogames program",
+      "description": "Teaching 3D lighting and Unreal Engine shaders to game development students."
+    },
+    {
+      "company": "Independent",
+      "role": "Unreal Authorized Instructor & Mentor",
+      "period": "Mar 2024 – Present",
+      "project": "Workshops & mentoring",
+      "description": "Epic Games Unreal Authorized Instructor. Workshops on Unreal shaders and materials and Unreal for 3D artists, plus mentoring in lighting and technical art."
+    },
+    {
+      "company": "PunkRobot",
+      "role": "Lighting Artist + VFX",
+      "period": "Sep 2025 – Feb 2026",
+      "project": "Brave Cat (Feature Film)",
+      "description": "Shot lighting and rendering for an animated feature."
+    },
+    {
+      "company": "Dual Effect",
+      "role": "Technical Artist",
+      "period": "Aug 2024 – Sep 2025",
+      "project": "Tormented Souls 2",
+      "description": "Remote. Owned VFX, shaders and optimization."
+    },
+    {
+      "company": "Birds Were Singing",
+      "role": "Founder & Director",
+      "period": "Jan 2019 – Feb 2025",
+      "project": "",
+      "description": ""
+    },
+    {
+      "company": "Nimble Giant",
+      "role": "Technical Artist",
+      "period": "Jun 2022 – Jun 2024",
+      "project": "Fortnite Creative & AAA shooter",
+      "description": "Niagara VFX, lighting and shader work across two projects."
+    },
+    {
+      "company": "Duoc UC",
+      "role": "Instructor, Digital Animation",
+      "period": "Aug 2018 – Feb 2022",
+      "project": "3D & Rendering Courses",
+      "description": "Taught 3D, VFX, lighting and rendering; designed industry-aligned curriculum."
+    },
+    {
+      "company": "Freelance",
+      "role": "Lighting & LookDev Artist",
+      "period": "Mar 2017 – Present",
+      "project": "Independent productions",
+      "description": "Lighting and look development."
+    },
+    {
+      "company": "Wild Bunch Studios",
+      "role": "Producer",
+      "period": "Sep 2015 – Mar 2018",
+      "project": "",
+      "description": ""
     }
   ],
   "footerText": "© 2026 Daniel Rojas",
-  "resumeTitle": "Resume",
-  "aboutTitle": "About Me",
+  "resumeTitle": "Experience",
+  "aboutTitle": "About",
   "socialLinks": [
     {
       "platform": "LinkedIn",
@@ -48,36 +130,117 @@
       "icon": "fa-artstation"
     },
     {
-      "platform": "Flipped Normals",
-      "icon": "fa-cart-shopping",
-      "url": "https://flippednormals.com/creator/hikari"
+      "platform": "itch.io",
+      "url": "https://lord-dunsany.itch.io/",
+      "icon": "fa-itch-io"
     }
   ],
   "resume": {
-    "resumeTitle": "RESUME",
-    "resumeSubtitle": "R",
-    "resumeDownloadUrl": "CV_DanielRojas_2025.html"
+    "resumeTitle": "Experience",
+    "resumeSubtitle": "Selected productions and roles",
+    "resumeDownloadUrl": "DanielRojas_CV_2026.pdf"
   },
-  "aboutDescription": "VFX & Technical Artist with over 8 years of experience in Maya and 4 years building high-end stylized solutions. From visual effects and lighting for animated features at Oscar-winning studio PunkRobot ('Brave Cat') to architecting advanced shader systems for AAA-scaled projects. My core expertise lies in Unreal Engine 5 (Niagara, Material Graph) and shader-driven visual solutions, focusing on capturing artistic style through technical innovation. I specialize in bridging the gap between artistic vision and engine constraints, ensuring that every effect is not only visually stunning but also performant across all platforms.",
-  "aboutSkills": [
-    "Real-time VFX (Niagara UE5)",
-    "Stylized Shaders & Material Logic",
-    "Unreal Engine 5 (Lumen/GPULM)",
-    "Houdini (VFX Production)",
-    "Lighting for Games",
-    "Maya/Python Pipeline Automation",
-    "Performance Optimization",
-    "Git/Perforce"
+  "aboutDescription": "VFX and Technical Artist with 4+ years focused on Unreal Engine 5 and 9+ years across games, film and DCC tools. I work on Niagara systems, shader architecture and performance optimization, and I have shipped VFX on Fortnite Creative and Tormented Souls 2. Currently Senior VFX Artist at BrewMasters Games and an Epic Games Unreal Authorized Instructor.",
+  "resumeToolsSections": [
+    {
+      "title": "Main tools",
+      "tools": [
+        {
+          "name": "Unreal Engine 5",
+          "logo": "assets/img/software/unreal5.png"
+        },
+        {
+          "name": "Autodesk Maya",
+          "logo": "assets/img/software/maya.png"
+        },
+        {
+          "name": "Substance 3D",
+          "logo": "assets/img/software/substance3d.png"
+        },
+        {
+          "name": "Unity",
+          "logo": "assets/img/software/unity.png"
+        }
+      ]
+    },
+    {
+      "title": "Also use",
+      "tools": [
+        {
+          "name": "Arnold Renderer",
+          "logo": "assets/img/software/arnold.svg"
+        },
+        {
+          "name": "SideFX Houdini",
+          "logo": "assets/img/software/houdini.png"
+        },
+        {
+          "name": "Redshift",
+          "logo": "assets/img/software/redshift.svg"
+        },
+        {
+          "name": "JengaFX EmberGen",
+          "logo": "assets/img/software/embergen.svg"
+        },
+        {
+          "name": "Adobe Photoshop",
+          "logo": "assets/img/software/photoshop.png"
+        }
+      ]
+    },
+    {
+      "title": "Production",
+      "tools": [
+        {
+          "name": "Git",
+          "logo": "assets/img/software/git.svg"
+        },
+        {
+          "name": "Perforce",
+          "logo": "assets/img/software/perforce.png"
+        }
+      ]
+    }
   ],
-  "siteTitle": "Daniel Rojas | VFX | Lighting | TechArt",
-  "heroSubtitle": "VFX | Lighting | TechArt",
+  "resumeSkillsSections": [
+    {
+      "title": "Shaders & VFX",
+      "skills": [
+        "Real-time VFX (Niagara)",
+        "Shaders & Materials",
+        "Stylized budget VFX",
+        "Texturing",
+        "3D modeling"
+      ]
+    },
+    {
+      "title": "Lighting & Rendering",
+      "skills": [
+        "Lighting & Rendering",
+        "Redshift",
+        "Arnold",
+        "Lumen/Lightmass"
+      ]
+    },
+    {
+      "title": "Pipeline & Optimization",
+      "skills": [
+        "Performance Optimization",
+        "Pipeline Automation",
+        "Unreal Insights Profiling",
+        "RenderDoc"
+      ]
+    }
+  ],
+  "siteTitle": "Daniel Rojas | VFX & Technical Artist",
+  "heroSubtitle": "VFX & Technical Artist",
   "siteName": "DANIEL ROJAS",
-  "siteDescription": "Portfolio of a VFX & Technical Artist specializing in Stylized Effects, Niagara, and Shader Development.",
-  "contactTitle": "Let's Connect",
-  "navLogoName": "DANIEL",
-  "resumeDownloadUrl": "CV_DanielRojas_2025.html",
+  "siteDescription": "Daniel Rojas is a VFX and Technical Artist working in Unreal Engine 5: Niagara VFX, shaders, lighting and performance optimization.",
+  "contactTitle": "Get in touch",
+  "navLogoName": "Daniel Rojas",
+  "resumeDownloadUrl": "DanielRojas_CV_2026.pdf",
   "contactEmail": "danielrojas.1429@gmail.com",
-  "contactDescription": "Want to talk VFX or Tech Art? Let's build something amazing!",
-  "heroTitle": "DANIEL ROJAS",
-  "navLogoLetters": "XYZ"
+  "contactDescription": "Open to new projects and to relocating to Japan.",
+  "heroTitle": "Daniel Rojas",
+  "navLogoLetters": ""
 }

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100" height="100">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a1a" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+    <linearGradient id="fireGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff3300" />
+      <stop offset="50%" stop-color="#ff9900" />
+      <stop offset="100%" stop-color="#ffcc00" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bgGrad)" />
+  <path d="M64,20 C70,35 85,45 85,60 C85,80 64,105 64,105 C64,105 43,80 43,60 C43,45 58,35 64,20 Z" fill="url(#fireGrad)" opacity="0.9" />
+  <path d="M64,35 C68,46 78,54 78,64 C78,78 64,95 64,95 C64,95 50,78 50,64 C50,54 60,46 64,35 Z" fill="#ffcc00" opacity="0.95" />
+  <path d="M64,50 C66,57 72,62 72,68 C72,77 64,88 64,88 C64,88 56,77 56,68 C56,62 62,57 64,50 Z" fill="#ffffff" />
+  <circle cx="35" cy="45" r="3" fill="#ff9900" />
+  <circle cx="93" cy="50" r="2.5" fill="#ffcc00" />
+  <circle cx="48" cy="90" r="2" fill="#ff3300" />
+  <circle cx="80" cy="88" r="3.5" fill="#ff9900" />
+  <circle cx="64" cy="112" r="1.5" fill="#ffcc00" />
+</svg>

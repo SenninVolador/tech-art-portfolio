@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: SenninVolador/tech-art-portfolio
   branch: main
 
 local_backend: true
@@ -121,7 +122,7 @@ collections:
             fields:
               - { label: "Title", name: "resumeTitle", widget: "string", default: "Resume" }
               - { label: "Subtitle", name: "resumeSubtitle", widget: "string", default: "Professional Experience" }
-              - { label: "Download Link", name: "resumeDownloadUrl", widget: "file", default: "assets/RESUME_DR_2025.pdf" }
+              - { label: "Download Link", name: "resumeDownloadUrl", widget: "file", default: "DanielROjasResume_2026.pdf" }
               - label: "Experience History"
                 name: "resumeHistory"
                 widget: "list"
